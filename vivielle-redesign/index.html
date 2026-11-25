@@ -1,0 +1,1013 @@
+<title>Vivielle Belle Intimates</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Vivielle – handgefertigte Luxus-Lingerie aus Satin, Mesh und Spitze. Entworfen von Julie, in streng limitierter Auflage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout: atelier lookbook. Pearl paper pages, noir image bands, one bordeaux band for the set.
+   Gold appears only where the product has gold (the chain), as hairlines and small marks. */
+:root{
+  color-scheme: light;
+  --noir:#120f10;        /* black lace, black satin */
+  --ink:#231d1f;         /* running text */
+  --pearl:#f6f1ef;       /* page ground, blush-tinted */
+  --veil:#ece3e0;        /* secondary surface, image placeholders */
+  --mute:#6f6366;        /* secondary text on pearl */
+  --line:#d9cdca;        /* hairlines on pearl */
+  --champagne:#b08d57;   /* the gold chain */
+  --champagne-soft:#d7bf95; /* gold on dark grounds */
+  --bordeaux:#4e1a22;    /* the wine fabric from the atelier film */
+  --on-dark:#f3ebe7;     /* text on noir / bordeaux */
+  --on-dark-mute:#b9aaa6;
+  --line-dark:rgba(243,235,231,.16);
+
+  --f-display:"Bodoni Moda","Didot","Bodoni 72","Times New Roman",serif;
+  --f-body:"Jost","Futura","Avenir Next","Helvetica Neue",Arial,sans-serif;
+
+  --t-hero:clamp(2.9rem,6.6vw,6.2rem);
+  --t-h2:clamp(2.1rem,3.8vw,3.4rem);
+  --t-h3:clamp(1.35rem,1.8vw,1.6rem);
+  --t-body:1rem;
+  --t-small:.875rem;
+  --t-label:.7rem;
+
+  --gutter:max(16px,env(safe-area-inset-left,0px));
+  --gutter-r:max(16px,env(safe-area-inset-right,0px));
+  --wrap:1360px;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--pearl);color:var(--ink);font-family:var(--f-body);font-weight:300;font-size:var(--t-body);line-height:1.65;letter-spacing:.01em;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--noir)}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+:focus-visible{outline:1px solid var(--champagne);outline-offset:3px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.04;letter-spacing:-.01em;text-wrap:balance;margin:0}
+em,.it{font-style:italic}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
+.label{font-family:var(--f-body);font-size:var(--t-label);font-weight:500;letter-spacing:.2em;text-transform:uppercase}
+.mute{color:var(--mute)}
+.num{font-variant-numeric:tabular-nums lining-nums}
+
+/* ---------- Buttons & links ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.7rem;min-height:52px;padding:0 2rem;font-size:var(--t-label);font-weight:500;letter-spacing:.2em;text-transform:uppercase;border:1px solid currentColor;transition:background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease)}
+.btn--solid{background:var(--noir);color:var(--on-dark);border-color:var(--noir)}
+.btn--solid:hover{background:var(--bordeaux);border-color:var(--bordeaux)}
+.btn--light{background:var(--on-dark);color:var(--noir);border-color:var(--on-dark)}
+.btn--light:hover{background:transparent;color:var(--on-dark)}
+.btn--ghost-light{color:var(--on-dark);border-color:var(--line-dark)}
+.btn--ghost-light:hover{border-color:var(--on-dark)}
+.btn--block{width:100%}
+.link{display:inline-flex;gap:.6rem;align-items:center;font-size:var(--t-label);font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding-bottom:.35rem;background:linear-gradient(currentColor,currentColor) left bottom/100% 1px no-repeat;transition:background-size .4s var(--ease)}
+.link:hover{background-size:35% 1px}
+
+/* ---------- Announcement + header ---------- */
+.announce{background:var(--noir);color:var(--on-dark);text-align:center;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding-block:.65rem;padding-left:var(--gutter);padding-right:var(--gutter-r)}
+.announce a{border-bottom:1px solid var(--champagne-soft);padding-bottom:1px;margin-left:.6rem;color:var(--champagne-soft)}
+.header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--pearl);border-bottom:1px solid transparent;transition:border-color .3s}
+.header.is-scrolled{border-bottom-color:var(--line)}
+.header__in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:76px;gap:1rem}
+.nav{display:flex;gap:2rem;align-items:center}
+.nav a{font-size:var(--t-label);font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding-block:.4rem;position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--champagne);transition:right .35s var(--ease)}
+.nav a:hover::after,.nav a[aria-current="page"]::after{right:0}
+.brand{display:flex;flex-direction:column;align-items:center;line-height:1}
+.brand__word{font-family:var(--f-display);font-size:1.7rem;letter-spacing:.34em;margin-right:-.34em;font-weight:400}
+.brand__sub{font-size:.56rem;letter-spacing:.42em;margin-right:-.42em;text-transform:uppercase;color:var(--mute);margin-top:.35rem}
+.tools{display:flex;justify-content:flex-end;gap:1.4rem;align-items:center}
+.tools button,.tools a{display:inline-flex;align-items:center;gap:.45rem;font-size:var(--t-label);font-weight:500;letter-spacing:.2em;text-transform:uppercase;min-height:40px}
+.icon{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.2}
+.bag-count{min-width:1.4em;height:1.4em;border-radius:50%;display:inline-grid;place-items:center;background:var(--noir);color:var(--on-dark);font-size:.62rem;letter-spacing:0;padding:0 .2em}
+.bag-count[data-zero="true"]{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.menu-btn{display:none}
+.t-hide-sm{display:inline}
+@media (max-width:960px){
+  .nav{display:none}
+  .menu-btn{display:inline-flex}
+  .t-hide-sm{display:none}
+  .header__in{height:64px}
+  .brand__word{font-size:1.35rem}
+  .brand__sub{font-size:.5rem}
+}
+
+/* ---------- Mobile menu / drawers ---------- */
+.scrim{position:fixed;inset:0;background:rgba(18,15,16,.45);z-index:80;opacity:0;pointer-events:none;transition:opacity .35s}
+.scrim.is-open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;bottom:0;right:0;width:min(440px,100%);background:var(--pearl);z-index:90;transform:translateX(102%);transition:transform .5s var(--ease);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-right:env(safe-area-inset-right,0px)}
+.drawer--left{right:auto;left:0;transform:translateX(-102%);padding-right:0;padding-left:env(safe-area-inset-left,0px)}
+.drawer.is-open{transform:none}
+.drawer__head{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 1.6rem;border-bottom:1px solid var(--line)}
+.drawer__body{flex:1;overflow-y:auto;padding:1.6rem}
+.drawer__foot{padding:1.4rem 1.6rem;border-top:1px solid var(--line);display:grid;gap:1rem}
+.close{width:40px;height:40px;display:grid;place-items:center;margin-right:-10px}
+.mnav{display:grid;gap:.2rem}
+.mnav a{font-family:var(--f-display);font-size:2rem;line-height:1.3}
+.mnav__meta{margin-top:2.4rem;display:grid;gap:.6rem;font-size:var(--t-small)}
+
+/* ---------- Views ---------- */
+.view{animation:viewIn .7s var(--ease) both}
+@keyframes viewIn{from{opacity:.001;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--noir);color:var(--on-dark)}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);min-height:clamp(540px,82vh,860px)}
+.hero__media{position:relative;overflow:hidden;background:#1d1819}
+.hero__media img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;animation:heroZoom 2.4s var(--ease) both}
+@keyframes heroZoom{from{transform:scale(1.06)}to{transform:none}}
+.hero__copy{display:flex;flex-direction:column;justify-content:space-between;padding-block:clamp(2.5rem,6vw,5rem);padding-left:clamp(1.5rem,5vw,5rem);padding-right:max(var(--gutter-r),clamp(1.5rem,4vw,4rem));gap:2.5rem;min-width:0}
+.hero__eyebrow{color:var(--champagne-soft);display:flex;gap:1rem;align-items:center}
+.hero__eyebrow::before{content:"";width:2.2rem;height:1px;background:var(--champagne-soft)}
+.hero h1{font-size:var(--t-hero);margin-top:1.6rem;font-weight:400}
+.hero h1 em{color:var(--champagne-soft);font-weight:400}
+.hero__lead{max-width:30rem;color:var(--on-dark-mute);margin-top:1.8rem;font-size:1.06rem}
+.hero__ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.4rem}
+.hero__detail{display:grid;grid-template-columns:120px minmax(0,1fr);gap:1.2rem;align-items:end;border-top:1px solid var(--line-dark);padding-top:1.6rem}
+.hero__detail img{aspect-ratio:3/4;width:120px;object-fit:cover}
+.hero__detail p{font-size:var(--t-small);color:var(--on-dark-mute);max-width:22rem}
+.hero__detail .label{color:var(--on-dark);display:block;margin-bottom:.4rem}
+@media (max-width:860px){
+  .hero__grid{grid-template-columns:1fr;min-height:0}
+  .hero__media{aspect-ratio:4/5;max-height:76vh;width:100%}
+  .hero__copy{padding-left:var(--gutter);padding-right:var(--gutter-r)}
+}
+
+/* ---------- Service strip ---------- */
+.promise{border-bottom:1px solid var(--line)}
+.promise ul{list-style:none;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding-block:1.3rem}
+.promise li{display:flex;gap:.7rem;align-items:center;justify-content:center;font-size:.78rem;letter-spacing:.06em;color:var(--mute);text-align:center;padding-inline:.6rem}
+.promise li+li{border-left:1px solid var(--line)}
+.promise svg{flex:none;width:16px;height:16px;stroke:var(--champagne);fill:none;stroke-width:1.2}
+@media (max-width:860px){.promise ul{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:1rem}.promise li:nth-child(3){border-left:0}}
+
+/* ---------- Section scaffolding ---------- */
+.section{padding-block:clamp(4.5rem,9vw,8rem)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:clamp(2rem,4vw,3.2rem);flex-wrap:wrap}
+.sec-head h2{font-size:var(--t-h2)}
+.sec-head .label{color:var(--champagne);display:block;margin-bottom:1rem}
+.sec-head p{max-width:26rem;color:var(--mute)}
+
+/* ---------- Product cards ---------- */
+.grid{display:grid;gap:clamp(1rem,2vw,1.6rem)}
+.grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.grid--3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.grid--3{grid-template-columns:minmax(0,1fr)}}
+.card{display:flex;flex-direction:column;gap:1rem;min-width:0}
+.card__media{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--veil)}
+.card__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .7s var(--ease),transform 1.2s var(--ease)}
+.card__media img+img{opacity:0}
+.card:hover .card__media img+img{opacity:1}
+.card:hover .card__media img{transform:scale(1.025)}
+.badge{position:absolute;top:1rem;left:1rem;z-index:2;background:var(--pearl);color:var(--ink);font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:.45rem .7rem}
+.badge--dark{background:var(--noir);color:var(--on-dark)}
+.card__meta{display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+.card__name{font-family:var(--f-display);font-size:1.35rem;line-height:1.2}
+.card__note{font-size:var(--t-small);color:var(--mute);margin-top:.15rem}
+.price{font-size:.95rem;font-variant-numeric:tabular-nums lining-nums;white-space:nowrap;letter-spacing:.04em}
+.price s{color:var(--mute);margin-left:.5rem;font-size:.85em}
+
+/* ---------- Set band ---------- */
+.setband{background:var(--bordeaux);color:var(--on-dark)}
+.setband__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,5rem);align-items:center;padding-block:clamp(4rem,8vw,7rem)}
+.setband__media{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:1rem;align-items:end}
+.setband__media img{width:100%;object-fit:cover}
+.setband__media img:first-child{aspect-ratio:4/5}
+.setband__media img:last-child{aspect-ratio:3/4;margin-bottom:3rem}
+.setband .label{color:var(--champagne-soft)}
+.setband h2{font-size:var(--t-h2);margin-top:1.2rem}
+.setband h2 em{color:var(--champagne-soft)}
+.setband p{color:var(--on-dark-mute);max-width:30rem;margin-top:1.4rem}
+.pieces{list-style:none;margin:2.2rem 0 0;padding:0;border-top:1px solid var(--line-dark)}
+.pieces li{display:flex;justify-content:space-between;gap:1rem;padding-block:.9rem;border-bottom:1px solid var(--line-dark);font-size:.95rem}
+.pieces li span:last-child{color:var(--on-dark-mute);font-variant-numeric:tabular-nums lining-nums}
+.pieces li.total{border-bottom:0;padding-top:1.2rem;align-items:baseline}
+.pieces li.total span:first-child{font-family:var(--f-display);font-size:1.6rem}
+.pieces li.total span:last-child{color:var(--on-dark);font-size:1.6rem;font-family:var(--f-display)}
+.pieces li.total s{font-family:var(--f-body);font-size:.95rem;color:var(--on-dark-mute);margin-right:.8rem}
+.setband__fine{font-size:.78rem!important;letter-spacing:.06em;margin-top:1rem!important}
+@media (max-width:860px){.setband__grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- Details (editorial) ---------- */
+.details{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(1rem,2vw,1.6rem);align-items:start}
+.detail figure{margin:0}
+.detail img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--veil)}
+.detail:first-child img{aspect-ratio:4/5.6}
+.detail:nth-child(2){margin-top:clamp(2rem,6vw,6rem)}
+.detail figcaption{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.2rem 1rem;margin-top:1.1rem;font-size:var(--t-small);color:var(--mute)}
+.detail figcaption b{font-weight:400;font-family:var(--f-display);font-size:1.2rem;color:var(--ink);grid-column:1/-1}
+@media (max-width:860px){.details{grid-template-columns:repeat(2,minmax(0,1fr))}.detail:first-child{grid-column:1/-1}.detail:nth-child(2){margin-top:0}}
+
+/* ---------- Atelier ---------- */
+.atelier{background:var(--noir);color:var(--on-dark)}
+.atelier__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr) minmax(0,1fr);gap:clamp(2rem,5vw,5rem);align-items:center;padding-block:clamp(4.5rem,9vw,8rem)}
+.atelier video,.atelier .poster{width:100%;aspect-ratio:404/720;object-fit:cover;background:#1d1819}
+.atelier h2{font-size:var(--t-h2)}
+.atelier h2 em{color:var(--champagne-soft)}
+.atelier .label{color:var(--champagne-soft);display:block;margin-bottom:1.2rem}
+.atelier p{color:var(--on-dark-mute);margin-top:1.4rem;max-width:28rem}
+.atelier__facts{list-style:none;padding:0;margin:0;display:grid;gap:0;border-top:1px solid var(--line-dark)}
+.atelier__facts li{padding-block:1.3rem;border-bottom:1px solid var(--line-dark)}
+.atelier__facts b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.4rem;color:var(--on-dark)}
+.atelier__facts span{font-size:var(--t-small);color:var(--on-dark-mute)}
+@media (max-width:960px){.atelier__grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.atelier__facts{grid-column:1/-1}}
+@media (max-width:600px){.atelier__grid{grid-template-columns:minmax(0,1fr)}.atelier video{max-width:340px}}
+
+/* ---------- Letter ---------- */
+.letter{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(2rem,6vw,6rem);align-items:center}
+.letter__img{position:relative}
+.letter__img img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.letter__img figcaption{position:absolute;left:-1px;bottom:-1px;background:var(--pearl);padding:.8rem 1.1rem .2rem 0;font-size:var(--t-small);color:var(--mute)}
+.letter__text{max-width:36rem}
+.letter__text .label{color:var(--champagne)}
+.letter__salute{font-family:var(--f-display);font-style:italic;font-size:clamp(2.2rem,4vw,3.2rem);margin-top:1.4rem;line-height:1.1}
+.letter__text p{margin-top:1.3rem;font-size:1.06rem}
+.signature{margin-top:2.2rem;display:flex;align-items:center;gap:1.2rem}
+.signature span{font-family:var(--f-display);font-style:italic;font-size:1.9rem}
+.signature::before{content:"";width:3rem;height:1px;background:var(--champagne)}
+@media (max-width:860px){.letter{grid-template-columns:minmax(0,1fr)}.letter__img{max-width:460px}}
+
+/* ---------- Reviews ---------- */
+.reviews{background:var(--veil)}
+.reviews__track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(280px,1fr);gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1.2rem;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.quote{scroll-snap-align:start;background:var(--pearl);padding:2rem 1.8rem;display:flex;flex-direction:column;gap:1.2rem;min-width:0}
+.quote__title{font-family:var(--f-display);font-size:1.3rem;line-height:1.25}
+.quote p{font-size:.95rem;color:var(--ink)}
+.quote footer{margin-top:auto;display:flex;justify-content:space-between;gap:1rem;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding-top:1rem;border-top:1px solid var(--line)}
+.stars{color:var(--champagne);letter-spacing:.2em;font-size:.8rem}
+
+/* ---------- Size teaser / calculator ---------- */
+.fit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,6vw,6rem);align-items:center}
+.fit h2{font-size:var(--t-h2)}
+.fit .label{color:var(--champagne);display:block;margin-bottom:1rem}
+.fit p{color:var(--mute);margin-top:1.2rem;max-width:30rem}
+.calc{border:1px solid var(--line);padding:clamp(1.5rem,3vw,2.4rem);background:var(--pearl);display:grid;gap:1.4rem}
+.calc__row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.field{display:grid;gap:.5rem}
+.field label{font-size:var(--t-label);font-weight:500;letter-spacing:.2em;text-transform:uppercase}
+.field__in{display:flex;align-items:center;border-bottom:1px solid var(--ink)}
+.field input{width:100%;min-width:0;border:0;background:transparent;font:inherit;font-family:var(--f-display);font-size:2rem;padding:.3rem 0;color:var(--ink);font-variant-numeric:lining-nums}
+.field input:focus{outline:none}
+.field__in:focus-within{border-color:var(--champagne)}
+.field__unit{color:var(--mute);font-size:var(--t-small)}
+.calc__out{display:flex;justify-content:space-between;align-items:end;gap:1rem;padding-top:1.2rem;border-top:1px solid var(--line);flex-wrap:wrap}
+.calc__size{font-family:var(--f-display);font-size:clamp(3rem,6vw,4.4rem);line-height:1}
+.calc__why{font-size:var(--t-small);color:var(--mute);max-width:16rem}
+@media (max-width:860px){.fit{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- Newsletter + footer ---------- */
+.footer{background:var(--noir);color:var(--on-dark-mute);padding-bottom:env(safe-area-inset-bottom,0px)}
+.news{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;align-items:end;padding-block:clamp(3.5rem,7vw,6rem);border-bottom:1px solid var(--line-dark)}
+.news h2{font-size:clamp(1.9rem,3.2vw,2.8rem);color:var(--on-dark)}
+.news h2 em{color:var(--champagne-soft)}
+.news p{margin-top:1rem;max-width:28rem}
+.news form{display:flex;border-bottom:1px solid var(--on-dark-mute);gap:1rem}
+.news input{flex:1;min-width:0;background:transparent;border:0;color:var(--on-dark);font:inherit;padding:1rem 0}
+.news input::placeholder{color:var(--on-dark-mute)}
+.news input:focus{outline:none}
+.news button{color:var(--on-dark);font-size:var(--t-label);font-weight:500;letter-spacing:.2em;text-transform:uppercase}
+.news__ok{grid-column:2;font-size:var(--t-small);color:var(--champagne-soft);margin-top:-1rem}
+.foot{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:2rem;padding-block:3.5rem}
+.foot h3{font-family:var(--f-body);font-size:var(--t-label);font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark);margin-bottom:1.2rem}
+.foot ul{list-style:none;padding:0;margin:0;display:grid;gap:.6rem;font-size:var(--t-small)}
+.foot a:hover{color:var(--on-dark)}
+.foot .brand{align-items:flex-start}
+.foot .brand__word{color:var(--on-dark);margin-right:0}
+.foot .brand__sub{color:var(--on-dark-mute);margin-right:0}
+.foot__addr{margin-top:1.6rem;font-size:var(--t-small);line-height:1.8;font-style:normal}
+.legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding-block:1.6rem;border-top:1px solid var(--line-dark);font-size:.75rem;letter-spacing:.06em}
+.legal nav{display:flex;flex-wrap:wrap;gap:1.4rem}
+@media (max-width:860px){.news{grid-template-columns:minmax(0,1fr)}.news__ok{grid-column:1}.foot{grid-template-columns:repeat(2,minmax(0,1fr))}.foot>div:first-child{grid-column:1/-1}}
+
+/* ---------- Collection page ---------- */
+.page-head{padding-block:clamp(3rem,6vw,5rem) clamp(2rem,4vw,3rem);border-bottom:1px solid var(--line)}
+.page-head .crumbs{font-size:.75rem;letter-spacing:.12em;color:var(--mute);text-transform:uppercase}
+.page-head .crumbs a:hover{color:var(--ink)}
+.page-head h1{font-size:var(--t-h2);margin-top:1.2rem}
+.page-head p{max-width:34rem;color:var(--mute);margin-top:1rem}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;padding-block:1.6rem}
+.chip{min-height:40px;padding:0 1.1rem;border:1px solid var(--line);font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;transition:all .25s}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--noir);color:var(--on-dark);border-color:var(--noir)}
+
+/* ---------- Product page ---------- */
+.pdp{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(2rem,4vw,4.5rem);padding-block:2rem clamp(4rem,8vw,6rem)}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+.gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--veil)}
+.gallery img:first-child{grid-column:1/-1;aspect-ratio:4/4.6}
+.buy{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px);align-self:start;display:grid;gap:1.6rem;min-width:0}
+.buy .crumbs{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.buy h1{font-size:clamp(2.2rem,3.4vw,3rem)}
+.buy__tag{font-family:var(--f-display);font-style:italic;font-size:1.2rem;color:var(--mute);margin-top:.5rem}
+.buy__price{display:flex;gap:.9rem;align-items:baseline;font-size:1.25rem;font-variant-numeric:tabular-nums lining-nums}
+.buy__price s{color:var(--mute);font-size:1rem}
+.buy__save{font-size:.68rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--bordeaux);border:1px solid currentColor;padding:.25rem .55rem}
+.buy__tax{font-size:.78rem;color:var(--mute);margin-top:-1.1rem}
+.opt{display:grid;gap:.7rem;border:0;margin:0;padding:0;min-width:0}
+.opt legend{display:flex;justify-content:space-between;width:100%;font-size:var(--t-label);font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:0;margin-bottom:.7rem}
+.opt legend span{color:var(--mute);letter-spacing:.08em;text-transform:none;font-weight:400;font-size:.8rem}
+.swatches{display:flex;flex-wrap:wrap;gap:.4rem}
+.sw{min-width:48px;height:44px;padding:0 .7rem;border:1px solid var(--line);font-size:.85rem;font-variant-numeric:tabular-nums lining-nums;transition:all .2s}
+.sw:hover{border-color:var(--ink)}
+.sw[aria-checked="true"]{background:var(--noir);color:var(--on-dark);border-color:var(--noir)}
+.buy__help{display:flex;justify-content:space-between;align-items:center;gap:1rem;font-size:var(--t-small);flex-wrap:wrap}
+.buy__help button{text-decoration:underline;text-decoration-color:var(--champagne);text-underline-offset:4px}
+.buy__msg{font-size:var(--t-small);color:var(--bordeaux);min-height:1.2em;margin-top:-.8rem}
+.perks{list-style:none;padding:0;margin:0;display:grid;gap:.55rem;font-size:var(--t-small);color:var(--mute)}
+.perks li{display:flex;gap:.7rem;align-items:center}
+.perks svg{width:15px;height:15px;stroke:var(--champagne);fill:none;stroke-width:1.3;flex:none}
+.acc{border-top:1px solid var(--line)}
+.acc details{border-bottom:1px solid var(--line)}
+.acc summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding-block:1.1rem;cursor:pointer;font-size:var(--t-label);font-weight:500;letter-spacing:.2em;text-transform:uppercase}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"+";font-family:var(--f-display);font-size:1.3rem;font-weight:400;letter-spacing:0;transition:transform .3s}
+.acc details[open] summary::after{transform:rotate(45deg)}
+.acc .acc__body{padding-bottom:1.3rem;font-size:.95rem;color:var(--ink);display:grid;gap:.7rem}
+.acc .acc__body .mute{font-size:var(--t-small)}
+@media (max-width:900px){
+  .pdp{grid-template-columns:minmax(0,1fr);padding-top:0}
+  .gallery{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:86%;overflow-x:auto;scroll-snap-type:x mandatory;margin-left:calc(-1 * var(--gutter));margin-right:calc(-1 * var(--gutter-r));padding-inline:var(--gutter) var(--gutter-r);scrollbar-width:none}
+  .gallery img,.gallery img:first-child{grid-column:auto;aspect-ratio:4/5;scroll-snap-align:center}
+  .buy{position:static}
+}
+
+/* ---------- Story page ---------- */
+.story-hero{background:var(--noir);color:var(--on-dark)}
+.story-hero__in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.7fr);gap:clamp(2rem,5vw,5rem);align-items:end;padding-block:clamp(4rem,8vw,7rem)}
+.story-hero .label{color:var(--champagne-soft)}
+.story-hero h1{font-size:clamp(2.6rem,5.6vw,5.2rem);margin-top:1.4rem}
+.story-hero h1 em{color:var(--champagne-soft)}
+.story-hero p{color:var(--on-dark-mute);font-size:1.1rem;max-width:30rem}
+.prose{max-width:40rem;margin-inline:auto;display:grid;gap:1.3rem;font-size:1.08rem}
+.prose h2{font-size:clamp(1.8rem,3vw,2.4rem);margin-top:2.2rem}
+.prose .lead{font-family:var(--f-display);font-size:clamp(1.4rem,2.2vw,1.75rem);line-height:1.4}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.steps li{padding:1.8rem 1.4rem 0 0;display:grid;gap:.6rem;align-content:start}
+.steps li+li{padding-left:1.4rem;border-left:1px solid var(--line)}
+.steps .n{font-family:var(--f-display);font-style:italic;color:var(--champagne);font-size:1.1rem}
+.steps b{font-family:var(--f-display);font-weight:400;font-size:1.45rem}
+.steps p{font-size:var(--t-small);color:var(--mute)}
+@media (max-width:860px){.story-hero__in{grid-template-columns:minmax(0,1fr)}.steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:2rem}.steps li:nth-child(3){border-left:0;padding-left:0}}
+@media (max-width:480px){.steps{grid-template-columns:minmax(0,1fr)}.steps li+li{border-left:0;padding-left:0}}
+.story-media{display:grid;grid-template-columns:minmax(0,.6fr) minmax(0,1fr);gap:clamp(1rem,3vw,2.4rem);align-items:center}
+.story-media video{width:100%;aspect-ratio:404/720;object-fit:cover;background:var(--veil)}
+.story-media blockquote{margin:0;font-family:var(--f-display);font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.25}
+.story-media blockquote em{color:var(--champagne)}
+.story-media cite{display:block;margin-top:1.6rem;font-style:normal}
+@media (max-width:700px){.story-media{grid-template-columns:minmax(0,1fr)}.story-media video{max-width:340px}}
+
+/* ---------- Size page ---------- */
+.table-scroll{overflow-x:auto;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-variant-numeric:tabular-nums lining-nums;font-size:.9rem}
+th,td{padding:.85rem 1rem;text-align:center;border-bottom:1px solid var(--line)}
+thead th{font-size:var(--t-label);font-weight:500;letter-spacing:.18em;text-transform:uppercase;background:var(--veil)}
+tbody th{font-family:var(--f-display);font-weight:400;font-size:1.1rem}
+tbody tr:last-child>*{border-bottom:0}
+td.hit{background:var(--noir);color:var(--on-dark)}
+tr.hit-row th,tr.hit-row td:not(.hit){background:#efe6e3}
+.howto{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.6rem}
+.howto li{border-top:1px solid var(--ink);padding-top:1.2rem;display:grid;gap:.5rem}
+.howto .n{font-family:var(--f-display);font-style:italic;color:var(--champagne)}
+.howto b{font-family:var(--f-display);font-weight:400;font-size:1.4rem}
+.howto p{font-size:.95rem;color:var(--mute)}
+@media (max-width:760px){.howto{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- Cart ---------- */
+.line{display:grid;grid-template-columns:88px minmax(0,1fr);gap:1rem;padding-block:1.2rem;border-bottom:1px solid var(--line)}
+.line:first-child{padding-top:0}
+.line img{width:88px;aspect-ratio:4/5;object-fit:cover}
+.line__top{display:flex;justify-content:space-between;gap:1rem}
+.line__name{font-family:var(--f-display);font-size:1.15rem;line-height:1.25}
+.line__var{font-size:.8rem;color:var(--mute);margin-top:.2rem}
+.line__ctrl{display:flex;justify-content:space-between;align-items:center;margin-top:.9rem}
+.qty{display:inline-flex;border:1px solid var(--line);align-items:center}
+.qty button{width:34px;height:34px}
+.qty span{min-width:1.6rem;text-align:center;font-size:.85rem}
+.rm{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-decoration:underline;text-underline-offset:3px}
+.ship{display:grid;gap:.6rem;font-size:.82rem;padding-bottom:1.4rem;margin-bottom:1.4rem;border-bottom:1px solid var(--line)}
+.ship__bar{height:2px;background:var(--line);position:relative;overflow:hidden}
+.ship__bar i{position:absolute;inset:0 auto 0 0;background:var(--champagne);transition:width .5s var(--ease)}
+.empty{text-align:center;padding-block:3rem;display:grid;gap:1.2rem;justify-items:center}
+.empty p{font-family:var(--f-display);font-size:1.5rem}
+.sum{display:flex;justify-content:space-between;font-size:1rem}
+.sum b{font-weight:400;font-family:var(--f-display);font-size:1.4rem}
+.note{font-size:.78rem;color:var(--mute);text-align:center}
+.toast{position:fixed;left:50%;bottom:calc(1.4rem + env(safe-area-inset-bottom,0px));transform:translate(-50%,150%);background:var(--noir);color:var(--on-dark);padding:.9rem 1.4rem;font-size:.8rem;letter-spacing:.08em;z-index:100;transition:transform .45s var(--ease),opacity .3s,visibility .3s;max-width:calc(100% - 32px);opacity:0;visibility:hidden}
+.toast.is-on{transform:translate(-50%,0);opacity:1;visibility:visible}
+
+/* ---------- Search ---------- */
+.search{position:fixed;inset:0 0 auto;background:var(--pearl);z-index:90;transform:translateY(-105%);transition:transform .45s var(--ease);padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid var(--line)}
+.search.is-open{transform:none}
+.search__in{padding-block:1.6rem 2rem}
+.search__bar{display:flex;gap:1rem;align-items:center;border-bottom:1px solid var(--ink)}
+.search__bar input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-family:var(--f-display);font-size:clamp(1.6rem,3vw,2.4rem);padding:.6rem 0;color:var(--ink)}
+.search__bar input:focus{outline:none}
+.search__res{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1rem;margin-top:1.6rem}
+.search__res a{display:grid;gap:.5rem;font-size:.9rem}
+.search__res img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.search__hint{margin-top:1.2rem;font-size:var(--t-small);color:var(--mute)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+
+<div class="announce" role="region" aria-label="Aktuelles Angebot">
+  Das Set: Body, BH &amp; Tanga für <span class="num">99,99 €</span> statt <span class="num">199,97 €</span>
+  <a href="#das-set">Entdecken</a>
+</div>
+
+<header class="header" id="header">
+  <div class="wrap header__in">
+    <div style="display:flex;align-items:center;gap:1rem">
+      <button class="menu-btn" id="menuBtn" aria-label="Menü öffnen" aria-controls="menu">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+      </button>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="#kollektion" data-nav="kollektion">Kollektion</a>
+        <a href="#das-set" data-nav="das-set">Das Set</a>
+        <a href="#geschichte" data-nav="geschichte">Meine Geschichte</a>
+        <a href="#groessenberater" data-nav="groessenberater">Größenberater</a>
+      </nav>
+    </div>
+    <a class="brand" href="#home" aria-label="Vivielle Startseite">
+      <span class="brand__word">VIVIELLE</span>
+      <span class="brand__sub">Belle Intimates</span>
+    </a>
+    <div class="tools">
+      <button id="searchBtn" aria-label="Suche öffnen"><svg class="icon" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg><span class="t-hide-sm">Suche</span></button>
+      <button id="bagBtn" aria-label="Warenkorb öffnen"><span class="t-hide-sm">Tasche</span><span class="bag-count num" id="bagCount" data-zero="true">0</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="app" tabindex="-1"></main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="news">
+      <div>
+        <h2>Neue Stücke erscheinen <em>in kleiner Auflage.</em></h2>
+        <p>Trag dich ein und erfahre zuerst, wenn Julie ein neues Design fertig hat. Kein Restock, kein Spam.</p>
+      </div>
+      <form id="newsForm" novalidate>
+        <label class="sr" for="newsEmail">E-Mail-Adresse</label>
+        <input id="newsEmail" type="email" placeholder="Deine E-Mail-Adresse" autocomplete="email" required>
+        <button type="submit">Eintragen</button>
+      </form>
+      <p class="news__ok" id="newsOk" hidden></p>
+    </div>
+    <div class="foot">
+      <div>
+        <a class="brand" href="#home"><span class="brand__word">VIVIELLE</span><span class="brand__sub">Belle Intimates</span></a>
+        <address class="foot__addr">Vivielle · Staffordstraße 18<br>63303 Dreieich, Deutschland<br>info@vivielle-intimates.com</address>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="#kollektion">Alle Stücke</a></li>
+          <li><a href="#das-set">Das Set</a></li>
+          <li><a href="#body-bonny">Body Bonny</a></li>
+          <li><a href="#vivielle-bh">Vivielle BH</a></li>
+          <li><a href="#vivielle-tanga">Vivielle Tanga</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Service</h3>
+        <ul>
+          <li><a href="#groessenberater">Größenberater</a></li>
+          <li><a href="https://vivielle-intimates.com/policies/shipping-policy" target="_blank" rel="noopener">Versand</a></li>
+          <li><a href="https://vivielle-intimates.com/policies/refund-policy" target="_blank" rel="noopener">Rückgabe</a></li>
+          <li><a href="https://vivielle-intimates.com/policies/contact-information" target="_blank" rel="noopener">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Vivielle</h3>
+        <ul>
+          <li><a href="#geschichte">Meine Geschichte</a></li>
+          <li><a href="https://www.instagram.com/viviellebelle" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Vivielle. Entworfen in Dreieich.</span>
+      <nav aria-label="Rechtliches">
+        <a href="https://vivielle-intimates.com/policies/legal-notice" target="_blank" rel="noopener">Impressum</a>
+        <a href="https://vivielle-intimates.com/policies/privacy-policy" target="_blank" rel="noopener">Datenschutz</a>
+        <a href="https://vivielle-intimates.com/policies/terms-of-service" target="_blank" rel="noopener">AGB</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- Overlays -->
+<div class="scrim" id="scrim"></div>
+
+<aside class="drawer drawer--left" id="menu" aria-label="Menü" aria-hidden="true">
+  <div class="drawer__head"><span class="label">Menü</span><button class="close" data-close aria-label="Menü schließen"><svg class="icon" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button></div>
+  <div class="drawer__body">
+    <nav class="mnav">
+      <a href="#home">Startseite</a>
+      <a href="#kollektion">Kollektion</a>
+      <a href="#das-set">Das Set</a>
+      <a href="#geschichte">Meine Geschichte</a>
+      <a href="#groessenberater">Größenberater</a>
+    </nav>
+    <div class="mnav__meta mute">
+      <span>Kostenloser Versand ab 79 €</span>
+      <span>Versand in 1–3 Werktagen</span>
+      <span>info@vivielle-intimates.com</span>
+    </div>
+  </div>
+</aside>
+
+<aside class="drawer" id="bag" aria-label="Warenkorb" aria-hidden="true">
+  <div class="drawer__head"><span class="label">Deine Tasche <span id="bagHeadCount" class="num"></span></span><button class="close" data-close aria-label="Warenkorb schließen"><svg class="icon" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button></div>
+  <div class="drawer__body" id="bagBody"></div>
+  <div class="drawer__foot" id="bagFoot"></div>
+</aside>
+
+<div class="search" id="search" aria-hidden="true">
+  <div class="wrap search__in">
+    <div class="search__bar">
+      <label class="sr" for="q">Suche</label>
+      <input id="q" type="search" placeholder="Wonach suchst du?" autocomplete="off">
+      <button class="close" data-close aria-label="Suche schließen"><svg class="icon" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+    </div>
+    <div class="search__res" id="qres"></div>
+    <p class="search__hint" id="qhint">Beliebt: Body, BH, Set, Spitze</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+var A = "assets/";
+var CUPS = ["A","B","C","D","DD","E","F"];
+var BANDS = ["65","70","75","80","85","90","95"];
+var TSIZES = ["XS","S","M","L","XL"];
+var FREE_SHIP = 79;
+
+var PRODUCTS = [
+  { id:"body-bonny", name:"Body Bonny", cat:"body", price:99.99,
+    badge:"Limitiert", note:"Satin & feines Mesh",
+    tag:"Limitiert. Kein Restock.",
+    imgs:["body-1","body-2","body-3","body-4","body-5"],
+    desc:"Body aus Satin und feinem Mesh mit Ausschnitt-Detail und abnehmbarem Gürtel. Weiche, angenehme Passform, die sich wie eine zweite Haut anfühlt.",
+    details:["Satin und feines Mesh","Ausschnitt-Detail vorne","Abnehmbarer Gürtel","Körbchen A–F, Unterbrustweite 65–95","Von Julie entworfen, in limitierter Stückzahl gefertigt"],
+    fit:"Der Body richtet sich nach Körbchen und Unterbrustweite, genau wie der BH. Kundinnen berichten von einer Passform „wie angegossen“, auch bei 65A.",
+    opts:[["Cup",CUPS],["Unterbrustweite",BANDS]] },
+  { id:"vivielle-bh", name:"Vivielle BH", cat:"bh", price:59.99,
+    note:"Mit abnehmbarer Goldkette",
+    tag:"Sinnlich wie eine zweite Haut.",
+    imgs:["bh-1","bh-2","bh-3","bh-5","bh-6","bh-7","bh-4","bh-8"],
+    desc:"Außergewöhnlich sanft und gemütlich. Feine Spitze, klare Linien und eine abnehmbare Goldkette, die du je nach Abend trägst oder weglässt.",
+    details:["Feine Spitze mit Bügel","Abnehmbare Goldkette","Körbchen A–F, Unterbrustweite 65–95","Passt zu Vivielle Tanga und Body Bonny"],
+    fit:"Wähle deine gewohnte BH-Größe. Bist du unsicher, ermittelt der Größenberater deine Größe aus zwei Maßen.",
+    opts:[["Cup",CUPS],["Unterbrustweite",BANDS]] },
+  { id:"vivielle-tanga", name:"Vivielle Tanga", cat:"tanga", price:39.99,
+    note:"Feine Spitze, schmale Bänder",
+    tag:"Für jeden Tag, nicht nur für besondere.",
+    imgs:["tanga-3","tanga-2","tanga-4","tanga-1","bh-2"],
+    desc:"Tanga aus feiner Spitze mit schmalen Seitenbändern. Angenehm zu tragen, für jeden Tag.",
+    details:["Feine Spitze","Schmale, doppelte Seitenbänder","Größen XS–XL"],
+    fit:"Fällt eher klein aus. Liegst du zwischen zwei Größen, wähle die größere (Hinweis aus Kundenbewertungen).",
+    opts:[["Größe",TSIZES]] },
+  { id:"das-set", name:"Das Set", sub:"Body, BH & Tanga", cat:"set", price:99.99, compare:199.97,
+    badge:"Bestes Angebot", dark:true, note:"Body, BH & Tanga",
+    tag:"Drei Teile, ein Preis.",
+    imgs:["set-1","body-1","bh-3","set-2","tanga-3"],
+    desc:"Body Bonny, Vivielle BH und Vivielle Tanga zusammen. Du sparst 99,98 € gegenüber den Einzelpreisen, der Versand ist kostenlos. Cup und Unterbrustweite gelten für Body und BH, die Tanga-Größe wählst du separat.",
+    details:["Body Bonny (einzeln 99,99 €)","Vivielle BH (einzeln 59,99 €)","Vivielle Tanga (einzeln 39,99 €)","Kostenloser Versand","Nur solange der Vorrat reicht"],
+    fit:"Cup und Unterbrustweite gelten für Body und BH. Der Tanga fällt eher klein aus, zwischen zwei Größen lieber die größere wählen.",
+    opts:[["Cup",CUPS],["Unterbrustweite",BANDS],["Tanga-Größe",TSIZES]] },
+  { id:"bh-tanga", name:"BH & Tanga", sub:"Das Bundle", cat:"set", price:89.98, compare:99.98,
+    note:"Zwei Teile, 10 % Vorteil",
+    tag:"Das Paar, das zusammengehört.",
+    imgs:["bh-1","bh-3","set-1","bh-8"],
+    desc:"Vivielle BH und Vivielle Tanga im Bundle: 89,98 € statt 99,98 €. Wähle Cup, Unterbrustweite und Tanga-Größe.",
+    details:["Vivielle BH mit abnehmbarer Goldkette","Vivielle Tanga aus feiner Spitze","10 % Vorteil gegenüber den Einzelpreisen"],
+    fit:"Cup und Unterbrustweite gelten für den BH. Der Tanga fällt eher klein aus, zwischen zwei Größen lieber die größere wählen.",
+    opts:[["Cup",CUPS],["Unterbrustweite",BANDS],["Tanga-Größe",TSIZES]] }
+];
+var BY_ID = {}; PRODUCTS.forEach(function(p){ BY_ID[p.id]=p; });
+
+var REVIEWS = [
+  { t:"Der schönste Tanga", q:"Das ist einfach der schönste Tanga, den ich je hatte. Ich habe Größe S und er passt wie angegossen. Ich werde auf jeden Fall wieder bestellen!", a:"Julia S.", d:"Mai 2026", p:"Vivielle Tanga" },
+  { t:"Eine Augenweide", q:"War ein Geschenk, sitzt perfekt, ist sehr hochwertig verarbeitet. Lieferung extrem schnell, mit persönlicher Dankeskarte.", a:"Stefan", d:"April 2026", p:"Das Set" },
+  { t:"Sitzt wie angegossen", q:"Ich hatte Angst, dass mir der Body nicht gefällt, aber er sitzt wie angegossen. 65A passt super.", a:"Ina T.", d:"Oktober 2024", p:"Body Bonny" },
+  { t:"Sehr schöner Body", q:"Das Material ist perfekt und schön angenehm. Ich würde es jeder Frau weiterempfehlen.", a:"Vanessa S.", d:"Dezember 2024", p:"Body Bonny" },
+  { t:"Habe 75 B", q:"Ich habe mittel bis kleine Brüste, aber er sitzt echt super. War erst skeptisch, aber ich liebe ihn.", a:"Lina H.", d:"Oktober 2024", p:"Vivielle BH" },
+  { t:"Hochwertig", q:"Total hochwertig und sexy, ehrlich.", a:"Ute M.", d:"November 2024", p:"Vivielle BH" }
+];
+
+/* ---------- helpers ---------- */
+function eur(n){ return n.toFixed(2).replace(".",",") + " €"; }
+function img(name, alt, eager){ return '<img src="'+A+name+'.jpg" alt="'+(alt||"")+'"'+(eager?' fetchpriority="high"':' loading="lazy"')+' decoding="async">'; }
+function $(s, r){ return (r||document).querySelector(s); }
+function $all(s, r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); }
+var ICON = {
+  truck:'<svg viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 9h4l4 4v3h-8"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="18" cy="17.5" r="1.8"/></svg>',
+  ret:'<svg viewBox="0 0 24 24"><path d="M4 9h11a5 5 0 0 1 0 10H8"/><path d="M8 5 4 9l4 4"/></svg>',
+  hand:'<svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg>',
+  clock:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'
+};
+var store = {
+  get:function(k,d){ try{ var v=localStorage.getItem(k); return v?JSON.parse(v):d; }catch(e){ return d; } },
+  set:function(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+
+/* ---------- size logic (from the Vivielle size chart) ---------- */
+function bandFor(under){
+  var r=[[63,67,"65"],[68,72,"70"],[73,77,"75"],[78,82,"80"],[83,87,"85"],[88,92,"90"],[93,97,"95"]];
+  for(var i=0;i<r.length;i++){ if(under>=r[i][0]-0.5 && under<=r[i][1]+0.5) return r[i][2]; }
+  return null;
+}
+function cupFor(diff){
+  var r=[[12,14,"A"],[14,16,"B"],[16,18,"C"],[18,20,"D"],[20,22,"E (DD)"],[22,24,"F"]];
+  for(var i=0;i<r.length;i++){ if(diff>=r[i][0] && (diff<r[i][1] || (i===r.length-1 && diff<=r[i][1]))) return r[i][2]; }
+  return null;
+}
+function sizeResult(under, bust){
+  if(!under || !bust) return { size:"—", why:"Gib beide Maße in Zentimetern ein." };
+  var b=bandFor(under), d=Math.round((bust-under)*10)/10, c=cupFor(d);
+  if(!b) return { size:"—", why:"Unterbrust zwischen 63 und 97 cm wird abgedeckt. Schreib uns, wir finden eine Lösung." };
+  if(!c) return { size:b+" ·", why: d<12 ? "Differenz "+fmt(d)+" cm, kleiner als Körbchen A. Schreib uns deine Maße." : "Differenz "+fmt(d)+" cm, größer als Körbchen F. Schreib uns deine Maße." , band:b };
+  return { size:b+c.replace(" (DD)",""), why:"Unterbrust "+fmt(under)+" cm → Band "+b+". Differenz "+fmt(d)+" cm → Körbchen "+c+".", band:b, cup:c.replace(" (DD)","") };
+}
+function fmt(n){ return String(n).replace(".",","); }
+
+/* ---------- views ---------- */
+function promise(){
+  return '<section class="promise" aria-label="Service"><div class="wrap"><ul>'+
+    '<li>'+ICON.hand+'<span>Von Julie entworfen &amp; handverpackt</span></li>'+
+    '<li>'+ICON.clock+'<span>Versand in 1–3 Werktagen</span></li>'+
+    '<li>'+ICON.truck+'<span>Kostenloser Versand ab 79 €</span></li>'+
+    '<li>'+ICON.ret+'<span>Rückgabe bis 05. Januar</span></li>'+
+  '</ul></div></section>';
+}
+function card(p){
+  var second = p.imgs[1] ? img(p.imgs[1], "") : "";
+  return '<a class="card" href="#'+p.id+'">'+
+    '<div class="card__media">'+(p.badge?'<span class="badge'+(p.dark?' badge--dark':'')+'">'+p.badge+'</span>':'')+img(p.imgs[0], p.name)+second+'</div>'+
+    '<div class="card__meta"><div><div class="card__name">'+p.name+'</div><div class="card__note">'+p.note+'</div></div>'+
+    '<div class="price">'+eur(p.price)+(p.compare?'<s>'+eur(p.compare)+'</s>':'')+'</div></div></a>';
+}
+function calcBlock(idp){
+  return '<form class="calc" data-calc onsubmit="return false">'+
+    '<div class="calc__row">'+
+      '<div class="field"><label for="'+idp+'u">Unterbrust</label><div class="field__in"><input id="'+idp+'u" inputmode="decimal" value="75" data-under><span class="field__unit">cm</span></div></div>'+
+      '<div class="field"><label for="'+idp+'b">Brustumfang</label><div class="field__in"><input id="'+idp+'b" inputmode="decimal" value="90" data-bust><span class="field__unit">cm</span></div></div>'+
+    '</div>'+
+    '<div class="calc__out"><div><span class="label mute">Deine Größe</span><div class="calc__size num" data-size>75B</div></div><p class="calc__why" data-why></p></div>'+
+  '</form>';
+}
+
+function viewHome(){
+  var trio = [BY_ID["body-bonny"],BY_ID["vivielle-bh"],BY_ID["vivielle-tanga"]];
+  var rv = REVIEWS.map(function(r){
+    return '<article class="quote"><div class="quote__title">'+r.t+'</div><p>„'+r.q+'“</p><footer><span>'+r.a+' · '+r.d+'</span><span>'+r.p+'</span></footer></article>';
+  }).join("");
+  return ''+
+  '<section class="hero" aria-label="Kollektion Nº 1">'+
+    '<div class="hero__grid">'+
+      '<div class="hero__media">'+img("body-1","Body Bonny aus Satin und Mesh, getragen auf einem grauen Sofa",true)+'</div>'+
+      '<div class="hero__copy">'+
+        '<div>'+
+          '<span class="label hero__eyebrow">Kollektion Nº 1 · Limitierte Auflage</span>'+
+          '<h1>Wie eine zweite Haut, <em>nur schöner.</em></h1>'+
+          '<p class="hero__lead">Satin, feines Mesh und Spitze. Jedes Stück wird von Julie entworfen und in streng limitierter Stückzahl gefertigt. Für Frauen, die sich wohlfühlen wollen, ohne auf Eleganz zu verzichten.</p>'+
+          '<div class="hero__ctas"><a class="btn btn--light" href="#kollektion">Kollektion entdecken</a><a class="btn btn--ghost-light" href="#das-set">Das Set · 99,99 €</a></div>'+
+        '</div>'+
+        '<a class="hero__detail" href="#vivielle-bh">'+img("bh-5","Detail: abnehmbare Goldkette am Vivielle BH")+'<div><span class="label">Das Detail</span><p>Die abnehmbare Goldkette am Vivielle BH. Getragen oder weggelassen, ganz wie der Abend es will.</p></div></a>'+
+      '</div>'+
+    '</div>'+
+  '</section>'+
+  promise()+
+  '<section class="section"><div class="wrap">'+
+    '<div class="sec-head"><div><span class="label">Die Kollektion</span><h2>Drei Stücke. <em>Keine Kompromisse.</em></h2></div><p>Jedes Design ist auf Stoff, Komfort und Eleganz ausgelegt und wird in kleiner Stückzahl produziert. Was weg ist, ist weg.</p></div>'+
+    '<div class="grid grid--3">'+trio.map(card).join("")+'</div>'+
+  '</div></section>'+
+  '<section class="setband" aria-label="Das Set"><div class="wrap setband__grid">'+
+    '<div class="setband__media">'+img("set-1","Das Set: BH und Tanga mit Strapsbändern, Rückansicht")+img("body-2","Body Bonny im Auto")+'</div>'+
+    '<div>'+
+      '<span class="label">Das Set</span>'+
+      '<h2>Drei Teile, <em>ein Preis.</em></h2>'+
+      '<p>Body Bonny, Vivielle BH und Vivielle Tanga zusammen. Cup und Unterbrustweite gelten für Body und BH, die Tanga-Größe wählst du separat.</p>'+
+      '<ul class="pieces num">'+
+        '<li><span>Body Bonny</span><span>99,99 €</span></li>'+
+        '<li><span>Vivielle BH</span><span>59,99 €</span></li>'+
+        '<li><span>Vivielle Tanga</span><span>39,99 €</span></li>'+
+        '<li class="total"><span>Im Set</span><span><s>199,97 €</s>99,99 €</span></li>'+
+      '</ul>'+
+      '<div style="display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem"><a class="btn btn--light" href="#das-set">Set zusammenstellen</a><a class="btn btn--ghost-light" href="#bh-tanga">BH &amp; Tanga · 89,98 €</a></div>'+
+      '<p class="setband__fine">Kostenloser Versand. Nur solange der Vorrat reicht.</p>'+
+    '</div>'+
+  '</div></section>'+
+  '<section class="section"><div class="wrap">'+
+    '<div class="sec-head"><div><span class="label">Die Details</span><h2>Gemacht, um <em>bemerkt zu werden.</em></h2></div><p>Kleine Entscheidungen, die man erst beim zweiten Blick sieht und beim Tragen sofort spürt.</p></div>'+
+    '<div class="details">'+
+      '<a class="detail" href="#vivielle-bh"><figure>'+img("bh-4","Goldkette über feiner Spitze")+'<figcaption><b>Die Goldkette</b><span>Abnehmbar, am Vivielle BH.</span></figcaption></figure></a>'+
+      '<a class="detail" href="#body-bonny"><figure>'+img("body-3","Body Bonny aus Mesh, liegend")+'<figcaption><b>Satin &amp; Mesh</b><span>Weich, transparent, mit abnehmbarem Gürtel. Body Bonny.</span></figcaption></figure></a>'+
+      '<a class="detail" href="#vivielle-tanga"><figure>'+img("tanga-2","Tanga aus Spitze mit schmalen Seitenbändern")+'<figcaption><b>Feine Spitze</b><span>Schmale Seitenbänder, für jeden Tag. Vivielle Tanga.</span></figcaption></figure></a>'+
+    '</div>'+
+  '</div></section>'+
+  '<section class="atelier" aria-label="Atelier"><div class="wrap atelier__grid">'+
+    '<div><span class="label">Designed with care</span><h2>Jedes Stück entsteht <em>in meinen Händen.</em></h2><p>Keine Fabrik, kein Fließband. Ich entwerfe, schneide zu und nähe jeden Prototyp selbst. Danach habe ich auf Messen in verschiedenen Ländern nach dem Produzenten gesucht, der meine Stücke genauso sorgfältig fertigt.</p><div style="margin-top:2rem"><a class="link" href="#geschichte" style="color:var(--on-dark)">Meine Geschichte lesen</a></div></div>'+
+    '<video src="'+A+'atelier.mp4" poster="'+A+'atelier-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Julie beim Stoffeinkauf, Entwerfen und Zuschneiden"></video>'+
+    '<ul class="atelier__facts">'+
+      '<li><b>1,5 Jahre</b><span>Vorbereitung vom ersten Entwurf bis zum fertigen Stück</span></li>'+
+      '<li><b>Limitiert</b><span>Kleine Stückzahlen, kein Restock beim Body Bonny</span></li>'+
+      '<li><b>Handverpackt</b><span>Julie verpackt und versendet jede Bestellung selbst</span></li>'+
+    '</ul>'+
+  '</div></section>'+
+  '<section class="section"><div class="wrap letter">'+
+    '<figure class="letter__img" style="margin:0">'+img("bh-1","Vivielle BH und Tanga, getragen vor einer rosé Wand")+'<figcaption>Vivielle BH &amp; Tanga</figcaption></figure>'+
+    '<div class="letter__text">'+
+      '<span class="label">Ein persönlicher Brief</span>'+
+      '<p class="letter__salute">Hey du,</p>'+
+      '<p>ich habe diese Marke vor knapp zwei Jahren für dich gegründet. Mein größtes Ziel war es immer, Frauen gemütliche Unterwäsche zu geben, in der sie sich wohlfühlen und die trotzdem elegant, schön und aufreizend ist.</p>'+
+      '<p>Also habe ich mich hingesetzt und jedes erste Stück für dich entworfen und genäht. Danach war ich auf Messen in verschiedenen Ländern und Städten, um den Produzenten zu finden, der die Stücke perfekt hinbekommt.</p>'+
+      '<p>Heute verpacke und versende ich deine Lieblingsstücke selbst, direkt aus dem Lager zu dir.</p>'+
+      '<div class="signature"><span>Julie Vivien</span></div>'+
+    '</div>'+
+  '</div></section>'+
+  '<section class="section reviews"><div class="wrap">'+
+    '<div class="sec-head"><div><span class="label">Aus 802 Bewertungen</span><h2>In ihren <em>eigenen Worten.</em></h2></div><p>Echte Stimmen von Kundinnen und Kunden, ungekürzt im Ton.</p></div>'+
+    '<div class="reviews__track" tabindex="0" aria-label="Kundenbewertungen">'+rv+'</div>'+
+  '</div></section>'+
+  '<section class="section"><div class="wrap fit">'+
+    '<div><span class="label">Größenberater</span><h2>Deine Größe <em>aus zwei Maßen.</em></h2><p>Miss deine Unterbrust und deinen Brustumfang. Wir rechnen dir Band und Körbchen aus, passend für Body Bonny und Vivielle BH.</p><div style="margin-top:2rem"><a class="link" href="#groessenberater">Zur Größentabelle</a></div></div>'+
+    calcBlock("h")+
+  '</div></section>';
+}
+
+function viewCollection(){
+  var f = state.filter || "alle";
+  var filters=[["alle","Alle"],["set","Sets"],["body","Body"],["bh","BH"],["tanga","Tanga"]];
+  var list = PRODUCTS.filter(function(p){ return f==="alle" || p.cat===f; });
+  return '<div class="wrap">'+
+    '<div class="page-head"><div class="crumbs"><a href="#home">Startseite</a> / Kollektion</div><h1>Die Kollektion</h1><p>Satin, feines Mesh und Spitze in Schwarz. Entworfen von Julie, in streng limitierten Stückzahlen produziert.</p></div>'+
+    '<div class="filters" role="group" aria-label="Filter">'+filters.map(function(x){ return '<button class="chip" data-filter="'+x[0]+'" aria-pressed="'+(f===x[0])+'">'+x[1]+'</button>'; }).join("")+'</div>'+
+    '<div class="grid grid--3" style="padding-bottom:clamp(4rem,8vw,6rem)">'+list.map(card).join("")+'</div>'+
+  '</div>'+promise();
+}
+
+function viewProduct(p){
+  var sel = state.sel[p.id] || (state.sel[p.id]={});
+  var opts = p.opts.map(function(o,i){
+    var name=o[0], vals=o[1], cur=sel[name];
+    return '<fieldset class="opt"><legend>'+name+'<span>'+(cur?'Gewählt: '+cur:'Bitte wählen')+'</span></legend>'+
+      '<div class="swatches" role="radiogroup" aria-label="'+name+'">'+vals.map(function(v){
+        return '<button type="button" class="sw" role="radio" aria-checked="'+(cur===v)+'" data-opt="'+name+'" data-val="'+v+'">'+v+'</button>';
+      }).join("")+'</div></fieldset>';
+  }).join("");
+  var save = p.compare ? '<span class="buy__save">Du sparst '+eur(p.compare-p.price)+'</span>' : '';
+  var others = PRODUCTS.filter(function(x){ return x.id!==p.id; }).slice(0,3);
+  return '<div class="wrap"><div class="pdp">'+
+    '<div class="gallery" aria-label="Produktbilder">'+p.imgs.map(function(n,i){ return img(n, p.name+" – Bild "+(i+1), i===0); }).join("")+'</div>'+
+    '<div class="buy">'+
+      '<div class="crumbs"><a href="#home">Startseite</a> / <a href="#kollektion">Kollektion</a></div>'+
+      '<div><h1>'+p.name+(p.sub?' <em class="mute" style="font-size:.6em;display:block;margin-top:.4rem">'+p.sub+'</em>':'')+'</h1><p class="buy__tag">'+p.tag+'</p></div>'+
+      '<div class="buy__price"><span>'+eur(p.price)+'</span>'+(p.compare?'<s>'+eur(p.compare)+'</s>':'')+save+'</div>'+
+      '<p class="buy__tax">Inkl. MwSt. '+(p.cat==="set"&&p.id==="das-set"?'Kostenloser Versand.':'Versandkosten werden an der Kasse berechnet.')+'</p>'+
+      '<p>'+p.desc+'</p>'+
+      opts+
+      '<div class="buy__help"><span class="mute">Unsicher bei der Größe?</span><button type="button" data-open-size>Größenberater öffnen</button></div>'+
+      '<button class="btn btn--solid btn--block" id="addBtn" type="button">In die Tasche · '+eur(p.price)+'</button>'+
+      '<p class="buy__msg" id="buyMsg" aria-live="polite"></p>'+
+      '<ul class="perks">'+
+        '<li>'+ICON.clock+'Versand in 1–3 Werktagen</li>'+
+        '<li>'+ICON.truck+'Kostenloser Versand ab 79 €</li>'+
+        '<li>'+ICON.hand+'Persönlich von Julie handverpackt</li>'+
+      '</ul>'+
+      '<div class="acc">'+
+        '<details open><summary>Details</summary><div class="acc__body"><ul style="margin:0;padding-left:1.1rem;display:grid;gap:.3rem">'+p.details.map(function(d){return '<li>'+d+'</li>';}).join("")+'</ul></div></details>'+
+        '<details><summary>Größe &amp; Passform</summary><div class="acc__body"><p>'+p.fit+'</p><a class="link" href="#groessenberater">Zur Größentabelle</a></div></details>'+
+        '<details><summary>Versand &amp; Rückgabe</summary><div class="acc__body"><p>Die meisten Bestellungen verlassen das Lager innerhalb von 1–3 Werktagen. Versand weltweit, innerhalb Deutschlands ab 79 € kostenlos.</p><p>Rückgabe innerhalb von 14 Tagen nach Erhalt, derzeit verlängert bis zum 05. Januar. Aus hygienischen Gründen nur ungetragen und mit Etikett. Schreib an info@vivielle-intimates.com, du bekommst ein Rücksendeetikett.</p></div></details>'+
+      '</div>'+
+    '</div>'+
+  '</div>'+
+  '<section style="padding-bottom:clamp(4rem,8vw,6rem)"><div class="sec-head"><div><span class="label" style="color:var(--champagne);display:block;margin-bottom:1rem">Vervollständige den Look</span><h2 style="font-size:clamp(1.8rem,3vw,2.6rem)">Passt dazu</h2></div></div><div class="grid grid--3">'+others.map(card).join("")+'</div></section>'+
+  '</div>';
+}
+
+function viewStory(){
+  return ''+
+  '<section class="story-hero"><div class="wrap story-hero__in">'+
+    '<div><span class="label">Meine Geschichte</span><h1>Ich habe gerade nur diese Marke. <em>Und ich gebe ihr alles.</em></h1></div>'+
+    '<p>Meine Zeit, meine Hände und mein ganzes Herz. Hallo, ich bin Julie. Bevor du dich bei Vivielle umsiehst, möchte ich dir erzählen, wer hinter dieser Marke steht.</p>'+
+  '</div></section>'+
+  '<section class="section"><div class="wrap story-media">'+
+    '<video src="'+A+'atelier.mp4" poster="'+A+'atelier-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Julie beim Stoffeinkauf, Entwerfen und Zuschneiden"></video>'+
+    '<div><blockquote>Keine Fabrik, kein Fließband. Nur ich, Stoff, <em>Nadel und Faden.</em></blockquote><cite class="label mute">Julie Vivien, Gründerin</cite></div>'+
+  '</div></section>'+
+  '<section class="section" style="padding-top:0"><div class="wrap">'+
+    '<div class="sec-head"><div><span class="label">So entsteht ein Stück</span><h2>Naht für Naht.</h2></div><p>In jedem Teil steckt Geduld, und in jeder Stunde steckt ein Stück von mir.</p></div>'+
+    '<ol class="steps">'+
+      '<li><span class="n">i.</span><b>Idee &amp; Skizze</b><p>Jedes Stück beginnt mit einer Idee und einer Zeichnung auf Papier.</p></li>'+
+      '<li><span class="n">ii.</span><b>Stoff &amp; Zuschnitt</b><p>Ich wähle Satin, Mesh und Spitze selbst aus und schneide den Prototyp zu.</p></li>'+
+      '<li><span class="n">iii.</span><b>Nähen</b><p>Der erste Prototyp entsteht an meiner Nähmaschine. Danach die Suche nach dem passenden Produzenten.</p></li>'+
+      '<li><span class="n">iv.</span><b>Handverpackt</b><p>Ich verpacke und versende jede Bestellung selbst, direkt aus dem Lager zu dir.</p></li>'+
+    '</ol>'+
+  '</div></section>'+
+  '<section class="section" style="background:var(--veil)"><div class="wrap"><div class="prose">'+
+    '<p class="lead">Ohne Hochglanz und ohne Verpackung drumherum. Einfach ehrlich, weil Kleidung mehr bedeutet, wenn man weiß, wie sie entstanden ist.</p>'+
+    '<h2>Wo ich gerade stehe</h2>'+
+    '<p>Mein Leben ist gerade ziemlich auf den Kopf gestellt. Ich habe kein eigenes Zuhause, kein Polster und keinen Plan B. Das fällt mir nicht leicht zu schreiben. Aber du sollst es von mir erfahren und nicht zwischen den Zeilen lesen müssen.</p>'+
+    '<h2>Was mir geblieben ist</h2>'+
+    '<p>Meine Hände. Meine Ideen. Nadel und Faden. Und Vivielle. Diese Marke ist der Ort, an dem ich mich zu Hause fühle, auch wenn mir die eigenen vier Wände fehlen.</p>'+
+    '<h2>Was dein Kauf bedeutet</h2>'+
+    '<p>Wenn du etwas von mir trägst, wird es Teil dieser Geschichte. Du kaufst nicht einfach Kleidung. Du hilfst einem Menschen, Schritt für Schritt wieder festen Boden unter den Füßen zu bekommen.</p>'+
+    '<p>Danke, dass du dir die Zeit genommen hast, mich kennenzulernen. Das bedeutet mir mehr, als ich in Worte fassen kann.</p>'+
+    '<div class="signature"><span>Mit Liebe, Julie Vivien</span></div>'+
+    '<div style="margin-top:1.6rem"><a class="btn btn--solid" href="#kollektion">Stücke entdecken</a></div>'+
+  '</div></div></section>';
+}
+
+function viewSize(){
+  var rows=[["63–67","65"],["68–72","70"],["73–77","75"],["78–82","80"],["83–87","85"],["88–92","90"],["93–97","95"]];
+  var cups=["A","B","C","D","E (DD)","F"];
+  var body = rows.map(function(r,i){
+    var base=77+i*5;
+    return '<tr data-band="'+r[1]+'"><td>'+r[0]+'</td><th scope="row">'+r[1]+'</th>'+cups.map(function(c,j){
+      var lo=base+j*2; return '<td data-cup="'+c.replace(" (DD)","")+'">'+lo+'–'+(lo+2)+'</td>'; }).join("")+'</tr>';
+  }).join("");
+  return '<div class="wrap">'+
+    '<div class="page-head"><div class="crumbs"><a href="#home">Startseite</a> / Größenberater</div><h1>Größenberater</h1><p>Miss deine Unterbrust und deinen Brustumfang. Die Größe gilt für Body Bonny und Vivielle BH. Den Tanga wählst du in XS bis XL; er fällt eher klein aus.</p></div>'+
+    '<section class="section" style="padding-top:clamp(2.5rem,5vw,4rem)"><div class="fit">'+
+      calcBlock("s")+
+      '<div><span class="label">So misst du richtig</span><ol class="howto" style="grid-template-columns:minmax(0,1fr);margin-top:1.2rem">'+
+        '<li><span class="n">i.</span><b>Unterbrust messen</b><p>Lege das Maßband eng um den Brustkorb, direkt unter der Brust.</p></li>'+
+        '<li><span class="n">ii.</span><b>Brustumfang messen</b><p>Miss an der vollsten Stelle der Brust, das Maßband locker und waagerecht.</p></li>'+
+        '<li><span class="n">iii.</span><b>Differenz ablesen</b><p>Brustumfang minus Unterbrust ergibt dein Körbchen. Beispiel: 90 − 75 = 15 cm → 75B.</p></li>'+
+      '</ol></div>'+
+    '</div></section>'+
+    '<section style="padding-bottom:clamp(4rem,8vw,6rem)">'+
+      '<div class="sec-head"><div><span class="label">Größentabelle</span><h2 style="font-size:clamp(1.8rem,3vw,2.6rem)">Brustumfang in cm</h2></div><p>Dein Ergebnis aus dem Rechner wird in der Tabelle markiert.</p></div>'+
+      '<div class="table-scroll"><table id="sizeTable"><thead><tr><th>Unterbrust (cm)</th><th>Band</th>'+cups.map(function(c){return '<th>'+c+'</th>';}).join("")+'</tr></thead><tbody>'+body+'</tbody></table></div>'+
+      '<p class="mute" style="margin-top:1.2rem;font-size:var(--t-small)">Unsicher? Schreib uns deine Maße an info@vivielle-intimates.com, wir berechnen deine Größe für dich.</p>'+
+    '</section>'+
+  '</div>';
+}
+
+/* ---------- size drawer (reuses bag drawer shell) ---------- */
+function openSizeDrawer(){
+  $("#bagHeadCount").textContent="";
+  $("#bag .label").firstChild.textContent="Größenberater ";
+  $("#bagBody").innerHTML = '<p class="mute" style="margin-bottom:1.4rem">Gib zwei Maße ein. Mit „Übernehmen“ wird die Größe direkt ausgewählt.</p>'+calcBlock("d");
+  $("#bagFoot").innerHTML = '<button class="btn btn--solid btn--block" id="applySize" type="button">Größe übernehmen</button><a class="note" href="#groessenberater" style="text-decoration:underline">Vollständige Größentabelle</a>';
+  bindCalcs($("#bag"));
+  sizeMode=true;
+  openPanel("bag");
+}
+var sizeMode=false;
+
+/* ---------- calculators ---------- */
+function bindCalcs(root){
+  $all("[data-calc]", root).forEach(function(f){
+    var u=$("[data-under]",f), b=$("[data-bust]",f);
+    function upd(){
+      var r=sizeResult(parseFloat(String(u.value).replace(",",".")), parseFloat(String(b.value).replace(",",".")));
+      $("[data-size]",f).textContent=r.size; $("[data-why]",f).textContent=r.why;
+      f._res=r;
+      var t=$("#sizeTable");
+      if(t){ $all("td.hit",t).forEach(function(x){x.classList.remove("hit");}); $all("tr.hit-row",t).forEach(function(x){x.classList.remove("hit-row");});
+        if(r.band){ var row=$('tr[data-band="'+r.band+'"]',t); if(row){ row.classList.add("hit-row"); if(r.cup){ var c=r.cup==="DD"?"E":r.cup; var cell=$('td[data-cup="'+(r.cup==="E"?"E":c)+'"]',row); if(cell) cell.classList.add("hit"); } } } }
+    }
+    u.addEventListener("input",upd); b.addEventListener("input",upd); upd();
+  });
+}
+
+/* ---------- bag ---------- */
+var bag = store.get("vv-bag", []);
+function bagQty(){ return bag.reduce(function(s,l){return s+l.q;},0); }
+function bagSum(){ return bag.reduce(function(s,l){return s+l.q*BY_ID[l.id].price;},0); }
+function saveBag(){ store.set("vv-bag", bag); renderBagCount(); }
+function renderBagCount(){ var n=bagQty(); var el=$("#bagCount"); el.textContent=n; el.setAttribute("data-zero", n===0); }
+function renderBag(){
+  sizeMode=false;
+  $("#bag .label").firstChild.textContent="Deine Tasche ";
+  $("#bagHeadCount").textContent = bagQty() ? "("+bagQty()+")" : "";
+  var sum=bagSum(), freeSet=bag.some(function(l){return l.id==="das-set";});
+  var rest=Math.max(0, FREE_SHIP-sum), pct=freeSet?100:Math.min(100, sum/FREE_SHIP*100);
+  if(!bag.length){
+    $("#bagBody").innerHTML='<div class="empty"><p>Deine Tasche ist noch leer.</p><span class="mute" style="font-size:var(--t-small)">Beginne mit dem Stück, das dich am meisten anspricht.</span><a class="btn btn--solid" href="#kollektion">Kollektion entdecken</a></div>';
+    $("#bagFoot").innerHTML=""; return;
+  }
+  $("#bagBody").innerHTML =
+    '<div class="ship"><span>'+((freeSet||rest===0)?'Dein Versand ist kostenlos.':'Noch <b class="num">'+eur(rest)+'</b> bis zum kostenlosen Versand.')+'</span><div class="ship__bar"><i style="width:'+pct+'%"></i></div></div>'+
+    bag.map(function(l,i){ var p=BY_ID[l.id];
+      return '<div class="line">'+img(p.imgs[0],p.name)+'<div><div class="line__top"><div><div class="line__name">'+p.name+(p.sub?' <span class="mute" style="font-size:.85rem">· '+p.sub+'</span>':'')+'</div><div class="line__var">'+l.v+'</div></div><div class="price">'+eur(p.price*l.q)+'</div></div>'+
+      '<div class="line__ctrl"><div class="qty"><button type="button" data-q="'+i+'" data-d="-1" aria-label="Menge verringern">−</button><span class="num">'+l.q+'</span><button type="button" data-q="'+i+'" data-d="1" aria-label="Menge erhöhen">+</button></div><button class="rm" type="button" data-rm="'+i+'">Entfernen</button></div></div></div>';
+    }).join("");
+  $("#bagFoot").innerHTML='<div class="sum"><span>Zwischensumme</span><b class="num">'+eur(sum)+'</b></div><button class="btn btn--solid btn--block" type="button" id="checkout">Zur Kasse</button><p class="note" id="checkoutNote">Inkl. MwSt. Versand wird an der Kasse berechnet.</p>';
+}
+function addToBag(p){
+  var sel=state.sel[p.id]||{};
+  var missing=p.opts.filter(function(o){return !sel[o[0]];}).map(function(o){return o[0];});
+  if(missing.length){ $("#buyMsg").textContent="Bitte wähle: "+missing.join(", ")+"."; return; }
+  var v=p.opts.map(function(o){ return o[0]+" "+sel[o[0]]; }).join(" · ");
+  var ex=bag.filter(function(l){return l.id===p.id && l.v===v;})[0];
+  if(ex) ex.q++; else bag.push({id:p.id, v:v, q:1});
+  saveBag(); $("#buyMsg").textContent="";
+  renderBag(); openPanel("bag");
+}
+
+/* ---------- panels ---------- */
+var openId=null, lastFocus=null;
+function openPanel(id){
+  closePanels(true);
+  lastFocus=document.activeElement;
+  var el=$("#"+id); el.classList.add("is-open"); el.setAttribute("aria-hidden","false");
+  $("#scrim").classList.add("is-open"); openId=id;
+  document.documentElement.style.overflow="hidden";
+  setTimeout(function(){ var f=el.querySelector("input,button,a"); if(f) f.focus({preventScroll:true}); }, 60);
+}
+function closePanels(silent){
+  ["menu","bag","search"].forEach(function(id){ var el=$("#"+id); el.classList.remove("is-open"); el.setAttribute("aria-hidden","true"); });
+  $("#scrim").classList.remove("is-open"); openId=null; document.documentElement.style.overflow="";
+  if(!silent && lastFocus && lastFocus.focus) lastFocus.focus({preventScroll:true});
+}
+
+/* ---------- search ---------- */
+function runSearch(){
+  var q=$("#q").value.trim().toLowerCase();
+  var hits = !q ? [] : PRODUCTS.filter(function(p){ return (p.name+" "+(p.sub||"")+" "+p.note+" "+p.desc+" "+p.cat).toLowerCase().indexOf(q)>-1; });
+  $("#qres").innerHTML = hits.map(function(p){ return '<a href="#'+p.id+'">'+img(p.imgs[0],p.name)+'<span>'+p.name+'</span><span class="price mute">'+eur(p.price)+'</span></a>'; }).join("");
+  $("#qhint").textContent = !q ? "Beliebt: Body, BH, Set, Spitze" : (hits.length ? hits.length+" Ergebnis"+(hits.length>1?"se":"") : "Nichts gefunden. Versuch es mit „Body“, „Spitze“ oder „Set“.");
+}
+
+/* ---------- router ---------- */
+var state = { filter:"alle", sel: store.get("vv-sel", {}) };
+var VIEWS = { home:viewHome, kollektion:viewCollection, geschichte:viewStory, groessenberater:viewSize };
+var current=null;
+function route(){
+  var h=(location.hash||"#home").slice(1) || "home";
+  if(!VIEWS[h] && !BY_ID[h]) h="home";
+  var html = VIEWS[h] ? VIEWS[h]() : viewProduct(BY_ID[h]);
+  var app=$("#app");
+  app.innerHTML='<div class="view">'+html+'</div>';
+  current=h;
+  $all("[data-nav]").forEach(function(a){ if(a.getAttribute("data-nav")===h) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+  document.title = (h==="home" ? "Vivielle Belle Intimates" : (BY_ID[h] ? BY_ID[h].name : ({kollektion:"Kollektion",geschichte:"Meine Geschichte",groessenberater:"Größenberater"})[h]) + " · Vivielle");
+  bindCalcs(app);
+  $all("video",app).forEach(function(v){ var p=v.play&&v.play(); if(p&&p.catch) p.catch(function(){}); });
+  closePanels(true);
+  window.scrollTo(0,0);
+}
+
+/* ---------- events ---------- */
+document.addEventListener("click", function(e){
+  var t=e.target.closest("button, a"); if(!t) return;
+  if(t.matches("[data-close]") ){ closePanels(); return; }
+  if(t.id==="menuBtn"){ openPanel("menu"); return; }
+  if(t.id==="bagBtn"){ renderBag(); openPanel("bag"); return; }
+  if(t.id==="searchBtn"){ openPanel("search"); runSearch(); return; }
+  if(t.matches("[data-filter]")){ state.filter=t.getAttribute("data-filter"); route(); return; }
+  if(t.matches("[data-opt]")){
+    var p=BY_ID[current]; var s=state.sel[p.id]||(state.sel[p.id]={});
+    s[t.getAttribute("data-opt")]=t.getAttribute("data-val"); store.set("vv-sel", state.sel);
+    var fs=t.closest("fieldset");
+    $all(".sw",fs).forEach(function(b){ b.setAttribute("aria-checked", b===t); });
+    $("legend span",fs).textContent="Gewählt: "+t.getAttribute("data-val");
+    $("#buyMsg").textContent="";
+    return;
+  }
+  if(t.matches("[data-open-size]")){ openSizeDrawer(); return; }
+  if(t.id==="applySize"){
+    var f=$("#bag [data-calc]"), r=f&&f._res, p2=BY_ID[current];
+    if(r && r.band && r.cup && p2){
+      var s2=state.sel[p2.id]||(state.sel[p2.id]={});
+      var cupOpt = r.cup==="E" ? "E" : r.cup;
+      if(p2.opts.some(function(o){return o[0]==="Cup";})){ s2["Cup"]=cupOpt; s2["Unterbrustweite"]=r.band; store.set("vv-sel", state.sel); closePanels(true); route(); toast("Größe "+r.band+r.cup+" übernommen"); }
+      else { closePanels(); toast("Dieses Stück hat Konfektionsgrößen XS–XL"); }
+    } else { toast("Bitte gib gültige Maße ein"); }
+    return;
+  }
+  if(t.id==="addBtn"){ addToBag(BY_ID[current]); return; }
+  if(t.matches("[data-q]")){ var i=+t.getAttribute("data-q"); bag[i].q+= +t.getAttribute("data-d"); if(bag[i].q<1) bag.splice(i,1); saveBag(); renderBag(); return; }
+  if(t.matches("[data-rm]")){ bag.splice(+t.getAttribute("data-rm"),1); saveBag(); renderBag(); return; }
+  if(t.id==="checkout"){ $("#checkoutNote").textContent="Testseite: Im Live-Shop führt dieser Schritt zum Shopify-Checkout."; return; }
+  if(t.tagName==="A" && t.getAttribute("href") && t.getAttribute("href").charAt(0)==="#"){
+    if(t.getAttribute("href")===location.hash){ route(); }
+    closePanels(true);
+  }
+});
+$("#scrim").addEventListener("click", function(){ closePanels(); });
+document.addEventListener("keydown", function(e){ if(e.key==="Escape" && openId) closePanels(); });
+$("#q").addEventListener("input", runSearch);
+$("#newsForm").addEventListener("submit", function(e){
+  e.preventDefault(); var v=$("#newsEmail").value.trim(), ok=$("#newsOk");
+  ok.hidden=false;
+  ok.textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? "Danke. Du erfährst als Erste von neuen Stücken. (Testseite, es wurde nichts gesendet.)" : "Bitte gib eine gültige E-Mail-Adresse ein, z. B. name@beispiel.de.";
+});
+var toastT; function toast(m){ var t=$("#toast"); t.textContent=m; t.classList.add("is-on"); clearTimeout(toastT); toastT=setTimeout(function(){t.classList.remove("is-on");},2600); }
+window.addEventListener("scroll", function(){ $("#header").classList.toggle("is-scrolled", window.scrollY>8); }, {passive:true});
+window.addEventListener("hashchange", route);
+renderBagCount();
+route();
+})();
+</script>
